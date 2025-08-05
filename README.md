@@ -1,8 +1,8 @@
-# 🚀 URL Shortener Full Stack Application
+# URL Shortener Full Stack Application
 
 A complete HTTP URL Shortener Microservice with React frontend and Node.js backend, featuring comprehensive analytics and mandatory logging integration.
 
-## 📋 Project Overview
+## Project Overview
 
 This project consists of two main components:
 
