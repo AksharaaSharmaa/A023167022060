@@ -206,36 +206,11 @@ const UrlShortener = () => {
 
   return (
     <Box>
-      <Typography 
-        variant="h3" 
-        gutterBottom 
-        sx={{ 
-          fontWeight: 700,
-          background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%)',
-          backgroundSize: '200% 200%',
-          backgroundClip: 'text',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          animation: 'gradientShift 3s ease infinite',
-          textAlign: 'center',
-          mb: 3
-        }}
-        className="gradient-text"
-      >
-        Forge Your Links
+      <Typography variant="h4" gutterBottom>
+        URL Shortener
       </Typography>
-      <Typography 
-        variant="body1" 
-        color="text.secondary" 
-        gutterBottom 
-        sx={{ 
-          textAlign: 'center',
-          mb: 4,
-          fontSize: '1.1rem',
-          opacity: 0.8
-        }}
-      >
-        Transform long URLs into powerful, trackable short links. Create up to 5 URLs simultaneously.
+      <Typography variant="body1" color="text.secondary" gutterBottom>
+        Shorten up to 5 URLs at once. Each URL will expire in 30 minutes by default.
       </Typography>
 
       {successMessage && (
@@ -244,8 +219,8 @@ const UrlShortener = () => {
         </Alert>
       )}
 
-      <Card sx={{ mb: 3 }} className="custom-card glass">
-        <CardContent sx={{ p: 4 }}>
+      <Card sx={{ mb: 3 }}>
+        <CardContent>
           <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
             <Typography variant="h6">URLs to Shorten</Typography>
             <Button
@@ -259,19 +234,7 @@ const UrlShortener = () => {
           </Box>
 
           {urls.map((url, index) => (
-            <Box key={url.id} sx={{ 
-              mb: 3, 
-              p: 3, 
-              border: '1px solid rgba(99, 102, 241, 0.2)', 
-              borderRadius: 2,
-              backgroundColor: 'rgba(51, 65, 85, 0.3)',
-              backdropFilter: 'blur(10px)',
-              transition: 'all 0.3s ease',
-              '&:hover': {
-                borderColor: 'rgba(99, 102, 241, 0.4)',
-                backgroundColor: 'rgba(51, 65, 85, 0.5)'
-              }
-            }}>
+            <Box key={url.id} sx={{ mb: 3, p: 2, border: '1px solid #e0e0e0', borderRadius: 1 }}>
               <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
                 <Typography variant="subtitle1">URL #{index + 1}</Typography>
                 {urls.length > 1 && (
@@ -334,23 +297,6 @@ const UrlShortener = () => {
             disabled={urls.every(url => !url.longUrl.trim())}
             startIcon={<LinkIcon />}
             fullWidth
-            className="custom-button neon-glow"
-            sx={{
-              mt: 3,
-              py: 2,
-              fontSize: '1.1rem',
-              fontWeight: 700,
-              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-              '&:hover': {
-                background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)',
-                transform: 'translateY(-2px)',
-                boxShadow: '0 20px 40px rgba(99, 102, 241, 0.4)'
-              },
-              '&:disabled': {
-                background: 'rgba(99, 102, 241, 0.3)',
-                transform: 'none'
-              }
-            }}
           >
             Shorten URLs
           </Button>
@@ -358,35 +304,15 @@ const UrlShortener = () => {
       </Card>
 
       {shortenedUrls.length > 0 && (
-        <Card className="custom-card glass">
-          <CardContent sx={{ p: 4 }}>
-            <Typography 
-              variant="h5" 
-              gutterBottom 
-              sx={{ 
-                fontWeight: 600,
-                color: 'primary.main',
-                mb: 3
-              }}
-            >
-              ✨ Your Forged Links
+        <Card>
+          <CardContent>
+            <Typography variant="h6" gutterBottom>
+              Shortened URLs
             </Typography>
             <Grid container spacing={2}>
               {shortenedUrls.map((shortUrl) => (
                 <Grid item xs={12} key={shortUrl.id}>
-                  <Box sx={{ 
-                    p: 3, 
-                    border: '1px solid rgba(99, 102, 241, 0.2)', 
-                    borderRadius: 2,
-                    backgroundColor: 'rgba(51, 65, 85, 0.3)',
-                    backdropFilter: 'blur(10px)',
-                    transition: 'all 0.3s ease',
-                    '&:hover': {
-                      borderColor: 'rgba(99, 102, 241, 0.4)',
-                      transform: 'translateY(-2px)',
-                      boxShadow: '0 8px 25px rgba(0, 0, 0, 0.2)'
-                    }
-                  }} className="success-animation">
+                  <Box sx={{ p: 2, border: '1px solid #e0e0e0', borderRadius: 1 }}>
                     <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
                       <Typography variant="subtitle2" color="primary">
                         {shortUrl.shortUrl}

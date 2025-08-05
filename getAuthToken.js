@@ -1,4 +1,5 @@
-const axios = require('axios');
+import axios from 'axios';
+import fs from 'fs';
 
 // Your credentials from the successful registration
 const credentials = {
@@ -23,7 +24,6 @@ async function getAuthToken() {
     console.log('Expires In:', response.data.expires_in);
     
     // Save the token to a file for future use
-    const fs = require('fs');
     fs.writeFileSync('auth_token.json', JSON.stringify(response.data, null, 2));
     console.log('✅ Token saved to auth_token.json');
     
