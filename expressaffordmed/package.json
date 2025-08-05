@@ -1,0 +1,30 @@
+{
+  "name": "expressaffordmed",
+  "version": "1.0.0",
+  "description": "For Affordmed Online Assessment",
+  "homepage": "https://github.com/AksharaaSharmaa/A023167022060#readme",
+  "bugs": {
+    "url": "https://github.com/AksharaaSharmaa/A023167022060/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AksharaaSharmaa/A023167022060.git"
+  },
+  "license": "ISC",
+  "author": "Akshara_Sharma",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}

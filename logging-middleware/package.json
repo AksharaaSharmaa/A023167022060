@@ -1,0 +1,16 @@
+{
+  "name": "logging-middleware",
+  "version": "1.0.0",
+  "description": "Reusable logging middleware that makes API calls to test server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "keywords": ["logging", "middleware", "api"],
+  "author": "Akshara Sharma",
+  "license": "MIT"
+} 

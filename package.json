@@ -1,0 +1,20 @@
+{
+  "name": "url-shortener-full-stack",
+  "version": "1.0.0",
+  "description": "Full-stack URL Shortener Application with React Frontend and Node.js Backend",
+  "type": "module",
+  "scripts": {
+    "test-api": "node test-backend-api.js",
+    "dev": "cd url-shortener-backend && npm run dev",
+    "start-backend": "cd url-shortener-backend && npm run dev",
+    "start-frontend": "cd url-shortener-app && npm start",
+    "install-all": "cd url-shortener-backend && npm install && cd ../url-shortener-app && npm install",
+    "start": "cd url-shortener-backend && npm start"
+  },
+  "keywords": ["url-shortener", "react", "nodejs", "express", "full-stack"],
+  "author": "Akshara Sharma",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
